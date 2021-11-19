@@ -6,20 +6,20 @@ def random_predict(number:int=1) -> int:
 
     while True:
         count += 1
-        predict_number = np.random.randint(1, 101) # предполагаемое число
+        predict_number = np.random.randint(1, 101) # number
         if number == predict_number:
-            break # выход из цикла, если угадали
+            break # break cycle if we guess right 
     return(count)
 
 
 def score_game(random_predict) -> int:
-    """За какое количество попыток в среднем за 1000 подходов угадывает наш алгоритм
+    """How many attempts we neded in mean for 1000 individual attempts
 
     Args:
-        random_predict ([type]): функция угадывания
+        random_predict ([type]): guessing function
 
     Returns:
-        int: среднее количество попыток
+        int: mean quantity of attempts
     """
 
     count_ls = [] # список для сохранения количества попыток
